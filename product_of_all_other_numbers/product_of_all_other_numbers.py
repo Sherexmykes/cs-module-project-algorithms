@@ -2,16 +2,22 @@
 Input: a List of integers
 Returns: a List of integers
 '''
+from functools import reduce #Import the reduce function from the functools module.
+
 def product_of_all_other_numbers(arr):
     # Your code here
 
     product_arr = []
     for i in range(len(arr)):
-        result = 1
-        for element in arr:
-            result *= element
-        result /= arr[i]
+        #result = 1
+        #for element in arr:
+           # result *= element
+        #result /= arr[i]
+       # product_arr.append(result)
+        temp_arr = arr[:i]+arr[i+1:]
+        result = reduce((lambda x, y: x*y), temp_arr) #In the reduce() call, pass a lambda function that takes two string arguments item1 and item2 and concatenates them
         product_arr.append(result)
+       
     return product_arr
 
 if __name__ == '__main__':
