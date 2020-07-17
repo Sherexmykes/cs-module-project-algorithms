@@ -6,10 +6,13 @@ def sliding_window_max(nums, k):
     # Your code here
 
     resulted_array = []
+    
     for i in range(len(nums)-(k-1)):
         end = i + k
+        window = nums[i:end]
+        max_num = max(window)
         resulted_array.append(max_num) 
-
+        
     return resulted_array
 if __name__ == '__main__':
     # Use the main function here to test out your implementation 
