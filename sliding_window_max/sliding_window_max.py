@@ -14,6 +14,13 @@ def sliding_window_max(nums, k):
         resulted_array.append(max_num) 
         
     return resulted_array
+
+# initialize a resulted array
+# i is a start index for window
+# initialize an end index
+# set the windows
+# get the max number
+# add max number to the resulted array
 if __name__ == '__main__':
     # Use the main function here to test out your implementation 
     arr = [1, 3, -1, -3, 5, 3, 6, 7]
